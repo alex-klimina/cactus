@@ -1,14 +1,15 @@
 package controllers;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
-@RestController
-@RequestMapping(value = "", produces = {"text/html"})
+@Controller
+@RequestMapping(value = "/")
 public class AppController {
 
-    @RequestMapping(value = "", method = RequestMethod.GET)
+    @RequestMapping(value = "index1", method = RequestMethod.GET)
     public String helloWorld() {
-        return "Hello, Cactus!";
+        return "index";
     }
 }
